@@ -1,0 +1,27 @@
+let arr = [8, 20, -2, 4, -6];
+
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }
+  let mid = Math.floor(arr.length / 2);
+  let leftArray = arr.slice(0, mid);
+  let rightArray = arr.slice(mid);
+  return merge(mergeSort(leftArray), mergeSort(rightArray));
+}
+
+function merge(leftArray, rightArray) {
+  let sortedArray = [];
+  while (leftArray.length && rightArray.length) {
+    if (leftArray[0] <= rightArray[0]) {
+      sortedArray.push(leftArray.shift());
+    } else {
+      sortedArray.push(rightArray.shift());
+    }
+  }
+  return [...sortedArray, ...leftArray, ...rightArray];
+}
+
+console.log(mergeSort(arr));
+
+// Output : [-6, -2, 4, 8, 20]
