@@ -21,3 +21,5 @@ function search(arr, target, leftIndex, rightIndex) {
 }
 
 console.log(recursiveBinarySearch([-5, 2, 5, 7, 11, 15], 15));
+
+// Output : 5

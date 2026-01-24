@@ -8,3 +8,5 @@ function linearSearch(arr, target) {
 }
 
 console.log(linearSearch([-5, 2, 5, 7, 10, 15], 2));
+
+// Output : 1

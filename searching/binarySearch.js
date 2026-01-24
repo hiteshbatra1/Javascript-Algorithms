@@ -17,3 +17,4 @@ function binarySearch(arr, target) {
 }
 
 console.log(binarySearch([-5, 2, 5, 7, 11, 15, 20], 2));
+// Output : 1
